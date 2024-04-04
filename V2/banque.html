@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="banque.css">
+</head>
+<body>
+    <div id="questionnaire">
+        <h1>Questionnaire</h1>
+        <div class="question">
+            <label for="lieu">Lieu :</label>
+            <input type="text" id="lieu" name="lieu">
+        </div>
+        <div class="question">
+            <label for="nombreBraqueurs">Nombre de braqueurs :</label>
+            <input type="number" id="nombreBraqueurs" name="nombreBraqueurs">
+        </div>
+        <div class="question">
+            <label for="nomInculpe">Prénom NOM de l'individu inculpé :</label>
+            <input type="text" id="nomInculpe" name="nomInculpe">
+        </div>
+        <div class="question">
+            <label for="nombreOtages">Nombre d'otage :</label>
+            <input type="number" id="nombreOtages" name="nombreOtages">
+        </div>
+        <div class="question">
+            <label for="nombreVehicules">Nombre de véhicule :</label>
+            <input type="number" id="nombreVehicules" name="nombreVehicules">
+        </div>
+        <div class="question">
+            <label for="typeVehicule">Type de véhicule - couleur du véhicule - [plaque d'immatriculation] - appartenant à ... :</label>
+            <input type="text" id="typeVehicule" name="typeVehicule">
+        </div>
+        <div class="question">
+            <label for="coursePoursuite">Course pourquite ? :</label>
+            <input type="checkbox" id="coursePoursuite" name="coursePoursuite">
+        </div>
+        <div class="coursePoursuiteDetails" style="display: none;">
+            <p>Pendant la course poursuite, l'individu a commis les infractions suivantes :</p>
+            <ul id="infractionsList"></ul>
+        </div>
+        <div class="question">
+            <label for="ppa">PPA :</label>
+            <select id="ppa" name="ppa">
+                <option value="possede">Possédé</option>
+                <option value="nonpossede">Non Possédé</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="carteIdentite">Carte d'identité :</label>
+            <select id="carteIdentite" name="carteIdentite">
+                <option value="possede">Possédé</option>
+                <option value="nonpossede">Non Possédé</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="permis">Permis :</label>
+            <select id="permis" name="permis">
+                <option value="possede">Possédé</option>
+                <option value="nonpossede">Non Possédé</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="droitSoins">Son droit à des soins :</label>
+            <input type="checkbox" id="droitSoins" name="droitSoins">
+        </div>
+        <div class="question">
+            <label for="droitAvocat">Un avocat :</label>
+            <input type="checkbox" id="droitAvocat" name="droitAvocat">
+        </div>
+        <div class="question">
+            <label for="droitMangerBoire">À manger et à boire :</label>
+            <input type="checkbox" id="droitMangerBoire" name="droitMangerBoire">
+        </div>
+        <div class="question">
+            <label for="droitNonExercer">Ne pas exercer ses droits :</label>
+            <input type="checkbox" id="droitNonExercer" name="droitNonExercer">
+        </div>
+        <button id="submit">Soumettre</button>
+    </div>
+
+    <script src="banque.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: pink;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.buttons button {
+  background-color: pink;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: grey;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  display: block;
+  width: 100%;
+  background-color: grey;
+  color: pink;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer.pink-band {
+  background-color: pink;
+  height: 50px;
+}

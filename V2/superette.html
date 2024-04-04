@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+  <link rel="stylesheet" href="superette.css">
+  <style>
+    /* Style pour le bouton de retour */
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 60px; /* Augmentation de la taille du bouton de 50% */
+      height: 60px; /* Augmentation de la taille du bouton de 50% */
+      background-color: purple; /* Changement de couleur en violet */
+      color: #fff;
+      border: none;
+      border-radius: 50%; /* Pour rendre le bouton rond */
+      text-align: center;
+      line-height: 60px; /* Augmentation de la taille du texte pour centrer verticalement */
+      font-size: 30px; /* Augmentation de la taille du texte pour correspondre à la nouvelle taille du bouton */
+      text-decoration: none; /* Pour supprimer le soulignement du lien */
+      z-index: 1; /* Assurer que le bouton reste au-dessus du contenu */
+    }
+
+    .back-button:hover {
+      background-color: #7d26cd; /* Assombrissement de la couleur violette au survol */
+    }
+  </style>
+</head>
+<body>
+  <a href="autre_page.html" class="back-button">&#8962;</a> <!-- Bouton rond avec une maison -->
+  <div class="container">
+    <h1 class="title center">Détails du braquage de superette</h1>
+    <form onsubmit="return onSubmit()">
+     <div class="form-group">
+        <label for="lieu"> > Lieu</label>
+        <input type="text" name="lieu" id="lieu">
+      </div>
+      <div class="form-group">
+        <label for="braqueurs"> > Nombre de braqueurs</label>
+        <input type="text" name="braqueurs" id="braqueurs">
+      </div>
+      <div class="form-group">
+        <label for="individu"> > Prénom et NOM de l'individu</label>
+        <input type="text" name="individu" id="individu">
+      </div>
+      <div class="form-group">
+        <label for="otages"> > Nombre d'otage</label>
+        <input type="text" name="otages" id="otages">
+      </div>
+      <div class="form-group">
+        <label for="vehiculetype"> > Type(s) du ou des véhicule(s) présent</label>
+        <input type="text" name="vehiculetype" id="vehiculetype">
+      </div>
+      <div class="form-group">
+        <label for="vehiculecolor"> > Couleur(s) du ou des véhicule(s) présent</label>
+        <input type="text" name="vehiculecolor" id="vehiculecolor">
+      </div>
+      <div class="form-group">
+        <label for="vehiculeplaque"> > Plaque(s) du ou des véhicule(s) présent</label>
+        <input type="text" name="vehiculeplaque" id="vehiculeplaque">
+      </div>
+      <div class="form-group">
+        <label for="vehiculeproprietaire"> > Nom et prénom du ou des propriétaire(s) du ou des véhicule(s) présent</label>
+        <input type="text" name="vehiculeproprietaire" id="vehiculeproprietaire">
+      </div>
+      <div class="form-group">
+        <label for="coursepoursuite"> > Y'a-t-il eu une course poursuite ?</label>
+        <div class="radio-group">
+          <input type="radio" id="oui" name="coursepoursuite" value="oui">
+          <label for="oui">Oui</label>
+          <input type="radio" id="non" name="coursepoursuite" value="non">
+          <label for="non">Non</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="droits"> > A-t-il exercé ses droits ?</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="droits_souhaite" name="droits[]" value="a_souhaite">
+          <label for="droits_souhaite"> À souhaité </label>
+          <input type="checkbox" id="droits_boire_manger" name="droits[]" value="a_boire_et_a_manger">
+          <label for="droits_boire_manger"> à boire et à manger </label>
+          <input type="checkbox" id="droits_avocat" name="droits[]" value="a_avocat">
+          <label for="droits_avocat"> un avocat </label>
+          <input type="checkbox" id="droits_soins_medicaux" name="droits[]" value="a_soins_medicaux">
+          <label for="droits_soins_medicaux"> des soins médicaux </label>
+          <input type="checkbox" id="droits_non_voulu" name="droits[]" value="n_a_pas_voulu">
+          <label for="droits_non_voulu">N'a pas voulu exercer ses droits </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ppa"> > PPA :</label>
+        <div class="radio-group">
+          <input type="radio" id="ppa_possede" name="ppa" value="possede">
+          <label for="ppa_possede">Possédé</label>
+          <input type="radio" id="ppa_non_possede" name="ppa" value="non_possede">
+          <label for="ppa_non_possede">Non-Possédé</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cartedidentitees"> > Carte d'identité :</label>
+        <div class="radio-group">
+          <input type="radio" id="cartedidentitees_possede" name="cartedidentitees" value="possede">
+          <label for="cartedidentitees_possede">Possédé</label>
+          <input type="radio" id="cartedidentitees_non_possede" name="cartedidentitees" value="non_possede">
+          <label for="cartedidentitees_non_possede">Non-Possédé</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="permisdeconduire"> > Permis de conduire :</label>
+        <div class="radio-group">
+          <input type="radio" id="permisdeconduire_possede" name="permisdeconduire" value="possede">
+          <label for="permisdeconduire_possede"> Possédé</label>
+          <input type="radio" id="permisdeconduire_non_possede" name="permisdeconduire" value="non_possede">
+          <label for="permisdeconduire_non_possede"> Non-Possédé</label>
+        </div>
+      </div>
+      <h2 class="subtitle">Saisies</h2>
+      <p>Si aucune saisie n'est disponible pour une question, noter "//".</p>
+      <div class="form-group">
+        <label for="nombredetel"> > Nombre de téléphone</label>
+        <input type="text" name="nombredetel" id="nombredetel">
+      </div>
+      <div class="form-group">
+        <label for="numserietel"> > Numéro de série du ou des  téléphone(s)</label>
+        <input type="text" name="numserietel" id="numserietel">
+      </div>
+      <div class="form-group">
+        <label for="nombrederadio"> > Nombre de radio</label>
+        <input type="text" name="nombrederadio" id="nombrederadio">
+      </div>
+      <div class="form-group">
+        <label for="nombrearme"> > Nombre d'arme</label>
+        <input type="text" name="nombrearme" id="nombrearme">
+      </div>
+      <div class="form-group">
+        <label for="typearme"> > Type d'arme</label>
+        <input type="text" name="typearme" id="typearme">
+      </div>
+      <div class="form-group">
+        <label for="numseriearme"> > Numéro de série</label>
+        <input type="text" name="numseriearme" id="numseriearme">
+      </div>
+      <div class="form-group">
+        <label for="nombrechargeur"> > Nombre de chargeur</label>
+        <input type="text" name="nombrechargeur" id="nombrechargeur">
+      </div>
+      <div class="form-group">
+        <label for="typechargeur"> > Type de chargeur</label>
+        <input type="text" name="typechargeur" id="typechargeur">
+      </div>
+      <div class="form-group">
+        <label for="nombredrogue"> > Nombre de drogue</label>
+        <input type="text" name="nombredrogue" id="nombredrogue">
+      </div>
+      <div class="form-group">
+        <label for="typedrogue"> > Type de drogue</label>
+        <input type="text" name="typedrogue" id="typedrogue">
+      </div>
+      <div class="form-group">
+        <label for="nombreargent"> > Nombre d'argent sale</label>
+        <input type="text" name="nombreargent" id="nombreargent">
+      </div>
+      <div class="form-group">
+        <label for="autresaisie"> > Autres saisies</label>
+        <input type="text" name="autresaisie" id="autresaisie">
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+    <h2 class="title center">Résultat rapport d'intervention :</h2>
+    <p id="result"></p>
+  </div>
+  <script src="superette.js"></script>
+</body>
+</html>
